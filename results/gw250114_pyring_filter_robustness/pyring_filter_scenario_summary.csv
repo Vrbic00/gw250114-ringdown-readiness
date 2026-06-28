@@ -1,0 +1,5 @@
+"scenario","samples","zero_outside_90pct_count","max_sigma_from_zero","max_sigma_operator","max_sigma_polarization","tightest_alpha_sigma","tightest_operator","tightest_polarization","df221_mean","dtau221_mean"
+"strict_df_bound_0p5",61594.,0.,1.2897398123186186,"epsilon1","plus",0.022896952465508963,"epsilon1","minus",0.24282527432750498,0.06901339947173113
+"public_df_bound_0p8",61834.,0.,1.2219991889766788,"epsilon1","plus",0.02380837355590317,"epsilon1","minus",0.23945757245936086,0.06695584126597573
+"loose_df_bound_1p2",62015.,0.,1.139422074768265,"epsilon1","plus",0.025017922619753587,"epsilon1","minus",0.23587636681734256,0.06547180369189218
+"positive_domain_only",62777.,0.,0.5276883444411381,"epsilon1","plus",0.03709394250093954,"epsilon1","minus",0.2027818643175218,0.06390052871718997

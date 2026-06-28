@@ -1,0 +1,4 @@
+numpy>=1.26
+scipy>=1.11
+qnm>=0.4.4
+reportlab>=4.0

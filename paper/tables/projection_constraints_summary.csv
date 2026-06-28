@@ -1,0 +1,3 @@
+"projection","rows","zero_outside_90pct_count","max_sigma_from_zero","max_sigma_operator","max_sigma_polarization","tightest_alpha_sigma","tightest_operator","tightest_polarization"
+"RINGDOWN",10,0,0.4973317373243378,"lambda_odd","plus",0.023834632859808195,"epsilon2","minus"
+"PYRING_DELTA",10,0,1.2219991889766788,"epsilon1","plus",0.02380837355590317,"epsilon1","minus"

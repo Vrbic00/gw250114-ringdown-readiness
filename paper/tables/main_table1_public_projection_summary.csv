@@ -1,0 +1,4 @@
+projection,observable_set,tested_rows,zero_outside_90pct,max_sigma_from_zero,max_sigma_row,tightest_alpha_sigma,note
+RINGDOWN,"{log f_220, log f_221, df_221}",10,0,0.497,lambda_odd plus,0.023834632859808195,Public-product projection; not a strain-level EFT likelihood.
+PYRING_DELTA,"{log(1+domega_221), log(1+dtau_221)}",10,0,1.222,epsilon1 plus,0.02380837355590317,Public-product projection; not a strain-level EFT likelihood.
+RINGDOWN_vs_PYRING,operator-by-operator comparison,10,0,0.535,epsilon1 plus,,"Maximum normalized projection difference; branches compared, not combined."

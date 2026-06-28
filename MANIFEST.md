@@ -1,0 +1,166 @@
+# Release manifest
+
+This directory was generated from the local working tree by:
+
+```text
+scripts/python/prepare_github_release_repo.py
+```
+
+## Included files
+
+- `config/README.md`
+- `config/event_registry.csv`
+- `config/custom_cases_template.wl`
+- `config/gw250114_posterior_calibration.wl`
+- `config/gw250114_public_ringdown_products.wl`
+- `config/gw250114_ringdown_eft_projection.wl`
+- `config/gw250114_pyring_delta_eft_projection.wl`
+- `config/gw250114_pyring_filter_robustness.wl`
+- `config/gw250114_constraints_comparison.wl`
+- `config/gw250114_linearized_posterior_projection.wl`
+- `config/gw250114_paper_tables.wl`
+- `config/higher_derivative_qnm_bridge.wl`
+- `config/higher_derivative_qnm_complete.wl`
+- `config/ringdown_posterior_informed_projection.wl`
+- `config/ringdown_synthetic_likelihood.wl`
+- `config/ringdown_toy_time_domain_likelihood.wl`
+- `config/spherical_cases.wl`
+- `config/metric_intake_registry.csv`
+- `data/README.md`
+- `data/beyond_kerr_qnm_selected_fits.csv`
+- `data/qnm_higher_derivative_coefficients.csv`
+- `data/qnm_higher_derivative_validation_chi0p7.csv`
+- `data/qnm_candidate_metric_registry.csv`
+- `data/static_master_potential_candidate_registry.csv`
+- `scripts/wolfram/kerr_qnm_berti.wl`
+- `scripts/wolfram/gw250114_kerr_report.wl`
+- `scripts/wolfram/gw250114_posterior_calibration.wl`
+- `scripts/wolfram/gw250114_public_ringdown_products.wl`
+- `scripts/wolfram/gw250114_ringdown_eft_projection.wl`
+- `scripts/wolfram/gw250114_pyring_delta_eft_projection.wl`
+- `scripts/wolfram/gw250114_pyring_filter_robustness.wl`
+- `scripts/wolfram/gw250114_constraints_comparison.wl`
+- `scripts/wolfram/gw250114_linearized_posterior_projection.wl`
+- `scripts/wolfram/gw250114_paper_tables.wl`
+- `scripts/wolfram/higher_derivative_qnm_bridge.wl`
+- `scripts/wolfram/higher_derivative_qnm_complete.wl`
+- `scripts/wolfram/ringdown_posterior_informed_projection.wl`
+- `scripts/wolfram/ringdown_synthetic_likelihood.wl`
+- `scripts/wolfram/ringdown_toy_time_domain_likelihood.wl`
+- `scripts/wolfram/master_potential_wkb.wl`
+- `scripts/wolfram/spherical_metric_diagnostics.wl`
+- `scripts/python/import_beyond_kerr_qnm_fits.py`
+- `scripts/python/kerr_qnm_berti_crosscheck.py`
+- `scripts/python/qnm_solver_crosscheck.py`
+- `scripts/python/schwarzschild_qnm_reference.py`
+- `scripts/python/schwarzschild_qnm_spin_references.py`
+- `scripts/python/static_master_potential_time_domain.py`
+- `scripts/python/tidal_charge_time_domain_benchmark.py`
+- `scripts/python/bardeen_time_domain_benchmark.py`
+- `scripts/python/hayward_time_domain_benchmark.py`
+- `scripts/python/hayward_overtone_matrix_pencil.py`
+- `scripts/python/static_qnm_scorecard.py`
+- `scripts/python/static_qnm_readiness_audit.py`
+- `scripts/python/static_qnm_physical_deviation_report.py`
+- `scripts/python/gw250114_projection_forest_plot.py`
+- `scripts/python/build_manuscript_package.py`
+- `scripts/python/build_table_figure_plan.py`
+- `scripts/python/build_latex_author_style_draft.py`
+- `scripts/python/pre_manuscript_audit.py`
+- `scripts/python/manuscript_text_audit.py`
+- `scripts/python/prepare_overleaf_roman_package.py`
+- `notes/2026-06-25_higher_derivative_ringdown_bridge.md`
+- `notes/2026-06-26_posterior_informed_projection.md`
+- `notes/2026-06-26_public_ringdown_products.md`
+- `notes/2026-06-26_ringdown_eft_projection.md`
+- `notes/2026-06-26_pyring_delta_eft_projection.md`
+- `notes/2026-06-26_pyring_filter_robustness.md`
+- `notes/2026-06-26_constraints_comparison.md`
+- `notes/2026-06-26_linearized_posterior_projection.md`
+- `notes/2026-06-26_candidate_metric_qnm_research.md`
+- `notes/2026-06-26_static_master_potential_feasibility.md`
+- `notes/2026-06-26_static_time_domain_validation.md`
+- `notes/2026-06-26_tidal_charge_static_benchmark.md`
+- `notes/2026-06-26_bardeen_static_benchmark.md`
+- `notes/2026-06-26_hayward_static_benchmark.md`
+- `notes/2026-06-26_hayward_overtone_matrix_pencil.md`
+- `results/higher_derivative_qnm_complete/higher_derivative_qnm_complete_report.md`
+- `results/higher_derivative_qnm_complete/gw250114_complete_eft_sensitivities.csv`
+- `results/higher_derivative_qnm_complete/gw250114_complete_kerr_baseline.csv`
+- `results/higher_derivative_qnm_complete/gw250114_mode_sensitivity_summary.csv`
+- `results/higher_derivative_qnm_complete/gw250114_overtone_amplification.csv`
+- `results/higher_derivative_qnm_complete/gw250114_complete_eft_sensitivity_heatmap.png`
+- `results/gw250114_constraints_comparison/gw250114_constraints_comparison_report.md`
+- `results/gw250114_constraints_comparison/projection_constraints_long.csv`
+- `results/gw250114_constraints_comparison/projection_constraints_summary.csv`
+- `results/gw250114_constraints_comparison/projection_consistency_by_operator.csv`
+- `results/gw250114_constraints_comparison/projection_observable_summary.csv`
+- `results/gw250114_constraints_comparison/projection_alpha_interval_forest.pdf`
+- `results/gw250114_constraints_comparison/projection_alpha_interval_forest.svg`
+- `results/gw250114_constraints_comparison/projection_sigma_from_zero_comparison.png`
+- `results/gw250114_pyring_filter_robustness/gw250114_pyring_filter_robustness_report.md`
+- `results/gw250114_pyring_filter_robustness/pyring_filter_operator_robustness.csv`
+- `results/gw250114_pyring_filter_robustness/pyring_filter_robustness_long.csv`
+- `results/gw250114_pyring_filter_robustness/pyring_filter_scenario_summary.csv`
+- `results/gw250114_pyring_filter_robustness/pyring_filter_max_sigma_by_scenario.png`
+- `results/gw250114_linearized_posterior_projection/gw250114_linearized_posterior_projection_report.md`
+- `results/gw250114_linearized_posterior_projection/linearized_alpha_posterior_summary.csv`
+- `results/gw250114_linearized_posterior_projection/linearized_projection_summary.csv`
+- `results/gw250114_linearized_posterior_projection/linearized_vs_gaussian_projection.csv`
+- `results/gw250114_linearized_posterior_projection/linearized_empirical_intervals.png`
+- `results/gw250114_paper_tables/gw250114_paper_tables_report.md`
+- `results/gw250114_paper_tables/table1_main_projected_constraints.csv`
+- `results/gw250114_paper_tables/table2_pipeline_consistency.csv`
+- `results/gw250114_paper_tables/table3_pyring_filter_robustness.csv`
+- `results/gw250114_paper_tables/table4_linearized_posterior_check.csv`
+- `results/gw250114_paper_tables/table5_public_ringdown_observables.csv`
+- `results/static_master_potential_time_domain/time_domain_qnm_validation.md`
+- `results/static_master_potential_time_domain/time_domain_qnm_summary.csv`
+- `results/static_master_potential_time_domain/time_domain_qnm_fit_windows.csv`
+- `results/tidal_charge_time_domain/tidal_charge_time_domain_report.md`
+- `results/tidal_charge_time_domain/tidal_charge_time_domain_summary.csv`
+- `results/bardeen_time_domain/bardeen_time_domain_report.md`
+- `results/bardeen_time_domain/bardeen_time_domain_summary.csv`
+- `results/hayward_time_domain/hayward_time_domain_report.md`
+- `results/hayward_time_domain/hayward_time_domain_summary.csv`
+- `results/hayward_overtone_matrix_pencil/hayward_overtone_matrix_pencil_report.md`
+- `results/hayward_overtone_matrix_pencil/hayward_overtone_matrix_pencil_summary.csv`
+- `results/hayward_overtone_matrix_pencil/hayward_overtone_matrix_pencil_modes.csv`
+- `results/static_qnm_scorecard/static_qnm_scorecard.md`
+- `results/static_qnm_scorecard/static_qnm_validation_summary.csv`
+- `results/static_qnm_readiness_audit/static_metric_readiness_audit.md`
+- `results/static_qnm_readiness_audit/static_metric_readiness_audit.csv`
+- `results/static_qnm_readiness_audit/static_metric_readiness_ladder.svg`
+- `results/static_qnm_readiness_audit/static_qnm_validation_scorecard.svg`
+- `results/static_qnm_physical_deviations/static_qnm_physical_deviations.md`
+- `results/static_qnm_physical_deviations/static_qnm_physical_deviations.csv`
+- `results/static_qnm_physical_deviations/static_qnm_physical_thresholds.csv`
+- `results/static_qnm_physical_deviations/static_qnm_physical_deviations.svg`
+- `results/pre_manuscript_audit/pre_manuscript_audit.md`
+- `results/pre_manuscript_audit/pre_manuscript_audit.csv`
+- `results/pre_manuscript_audit/referee_risk_register.csv`
+- `results/manuscript_package/claim_guardrails.md`
+- `results/manuscript_package/main_table1_public_projection_summary.csv`
+- `results/manuscript_package/main_table2_static_readiness_summary.csv`
+- `results/manuscript_package/pre_submission_checklist.md`
+- `results/manuscript_package/submission_framing_memo.md`
+- `paper/main.tex`
+- `paper/references.bib`
+- `paper/README_OVERLEAF.md`
+- `paper/manuscript.md`
+- `paper/figures/`
+- `paper/tables/`
+
+## Expected files not found during generation
+
+- none
+
+## Intentionally excluded categories
+
+- `data/raw/`
+- `.deps/` and local virtual environments
+- `__pycache__/`
+- transient LaTeX build products
+- Overleaf ZIP exports
+- private style-reference PDFs
+- large raw waveform/posterior products

@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="690" viewBox="0 0 960 690">
+<style>text{font-family:Arial,Helvetica,sans-serif}.title{font-size:20px;font-weight:700;fill:#1f2933}.small{font-size:11px;fill:#52606d}.label{font-size:10px;fill:#1f2933}.tick{font-size:9px;fill:#52606d}</style>
+<rect width="100%" height="100%" fill="white"/>
+<text x="32" y="34" class="title">Public GW250114 one-at-a-time alpha projections</text>
+<text x="32" y="52" class="small">Horizontal bars show 90 percent public-product intervals; the vertical line marks alpha = 0.</text>
+<line x1="170.0" y1="51" x2="170.0" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="170.0" y="31" class="tick" text-anchor="middle">-4</text>
+<line x1="263.1" y1="51" x2="263.1" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="263.1" y="31" class="tick" text-anchor="middle">-3</text>
+<line x1="356.2" y1="51" x2="356.2" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="356.2" y="31" class="tick" text-anchor="middle">-2</text>
+<line x1="449.4" y1="51" x2="449.4" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="449.4" y="31" class="tick" text-anchor="middle">-1</text>
+<line x1="542.5" y1="51" x2="542.5" y2="628" stroke="#334e68" stroke-width="1.4"/>
+<text x="542.5" y="31" class="tick" text-anchor="middle">0</text>
+<line x1="635.6" y1="51" x2="635.6" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="635.6" y="31" class="tick" text-anchor="middle">1</text>
+<line x1="728.8" y1="51" x2="728.8" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="728.8" y="31" class="tick" text-anchor="middle">2</text>
+<line x1="821.9" y1="51" x2="821.9" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="821.9" y="31" class="tick" text-anchor="middle">3</text>
+<line x1="915.0" y1="51" x2="915.0" y2="628" stroke="#d9e2ec" stroke-width="0.8"/>
+<text x="915.0" y="31" class="tick" text-anchor="middle">4</text>
+<text x="542.5" y="18" class="small" text-anchor="middle">projected coupling alpha</text>
+<text x="156" y="621.0" class="label" text-anchor="end">RINGDOWN: lambda_ev^+</text>
+<line x1="483.9" y1="618.0" x2="573.9" y2="618.0" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="483.9" y1="614.0" x2="483.9" y2="622.0" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="573.9" y1="614.0" x2="573.9" y2="622.0" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="528.9" cy="618.0" r="3.4" fill="#2f80ed"/>
+<text x="156" y="591.4" class="label" text-anchor="end">RINGDOWN: lambda_ev^-</text>
+<line x1="186.6" y1="588.4" x2="733.1" y2="588.4" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="186.6" y1="584.4" x2="186.6" y2="592.4" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="733.1" y1="584.4" x2="733.1" y2="592.4" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="459.9" cy="588.4" r="3.4" fill="#2f80ed"/>
+<text x="156" y="561.8" class="label" text-anchor="end">RINGDOWN: lambda_odd^+</text>
+<line x1="489.9" y1="558.8" x2="640.7" y2="558.8" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="489.9" y1="554.8" x2="489.9" y2="562.8" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="640.7" y1="554.8" x2="640.7" y2="562.8" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="565.3" cy="558.8" r="3.4" fill="#2f80ed"/>
+<text x="156" y="532.3" class="label" text-anchor="end">RINGDOWN: lambda_odd^-</text>
+<line x1="444.3" y1="529.3" x2="595.1" y2="529.3" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="444.3" y1="525.3" x2="444.3" y2="533.3" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="595.1" y1="525.3" x2="595.1" y2="533.3" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="519.7" cy="529.3" r="3.4" fill="#2f80ed"/>
+<text x="156" y="502.7" class="label" text-anchor="end">RINGDOWN: epsilon_1^+</text>
+<line x1="523.7" y1="499.7" x2="552.6" y2="499.7" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="523.7" y1="495.7" x2="523.7" y2="503.7" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="552.6" y1="495.7" x2="552.6" y2="503.7" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="538.1" cy="499.7" r="3.4" fill="#2f80ed"/>
+<text x="156" y="473.1" class="label" text-anchor="end">RINGDOWN: epsilon_1^-</text>
+<line x1="537.4" y1="470.1" x2="545.2" y2="470.1" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="537.4" y1="466.1" x2="537.4" y2="474.1" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="545.2" y1="466.1" x2="545.2" y2="474.1" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="541.3" cy="470.1" r="3.4" fill="#2f80ed"/>
+<text x="156" y="443.5" class="label" text-anchor="end">RINGDOWN: epsilon_2^+</text>
+<line x1="529.5" y1="440.5" x2="549.5" y2="440.5" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="529.5" y1="436.5" x2="529.5" y2="444.5" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="549.5" y1="436.5" x2="549.5" y2="444.5" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="539.5" cy="440.5" r="3.4" fill="#2f80ed"/>
+<text x="156" y="413.9" class="label" text-anchor="end">RINGDOWN: epsilon_2^-</text>
+<line x1="537.7" y1="410.9" x2="545.0" y2="410.9" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="537.7" y1="406.9" x2="537.7" y2="414.9" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="545.0" y1="406.9" x2="545.0" y2="414.9" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="541.4" cy="410.9" r="3.4" fill="#2f80ed"/>
+<text x="156" y="384.4" class="label" text-anchor="end">RINGDOWN: epsilon_3^+</text>
+<line x1="235.6" y1="381.4" x2="706.9" y2="381.4" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="235.6" y1="377.4" x2="235.6" y2="385.4" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="706.9" y1="377.4" x2="706.9" y2="385.4" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="471.3" cy="381.4" r="3.4" fill="#2f80ed"/>
+<text x="156" y="354.8" class="label" text-anchor="end">RINGDOWN: epsilon_3^-</text>
+<line x1="378.1" y1="351.8" x2="849.4" y2="351.8" stroke="#2f80ed" stroke-width="2.1"/>
+<line x1="378.1" y1="347.8" x2="378.1" y2="355.8" stroke="#2f80ed" stroke-width="1.2"/>
+<line x1="849.4" y1="347.8" x2="849.4" y2="355.8" stroke="#2f80ed" stroke-width="1.2"/>
+<circle cx="613.7" cy="351.8" r="3.4" fill="#2f80ed"/>
+<text x="156" y="325.2" class="label" text-anchor="end">pyRing: lambda_ev^+</text>
+<line x1="484.6" y1="322.2" x2="556.3" y2="322.2" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="484.6" y1="318.2" x2="484.6" y2="326.2" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="556.3" y1="318.2" x2="556.3" y2="326.2" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="520.4" cy="322.2" r="3.4" fill="#c75b12"/>
+<text x="156" y="295.6" class="label" text-anchor="end">pyRing: lambda_ev^-</text>
+<line x1="519.7" y1="292.6" x2="565.8" y2="292.6" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="519.7" y1="288.6" x2="519.7" y2="296.6" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="565.8" y1="288.6" x2="565.8" y2="296.6" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="542.7" cy="292.6" r="3.4" fill="#c75b12"/>
+<text x="156" y="266.1" class="label" text-anchor="end">pyRing: lambda_odd^+</text>
+<line x1="522.9" y1="263.1" x2="583.7" y2="263.1" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="522.9" y1="259.1" x2="522.9" y2="267.1" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="583.7" y1="259.1" x2="583.7" y2="267.1" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="553.3" cy="263.1" r="3.4" fill="#c75b12"/>
+<text x="156" y="236.5" class="label" text-anchor="end">pyRing: lambda_odd^-</text>
+<line x1="501.3" y1="233.5" x2="562.1" y2="233.5" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="501.3" y1="229.5" x2="501.3" y2="237.5" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="562.1" y1="229.5" x2="562.1" y2="237.5" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="531.7" cy="233.5" r="3.4" fill="#c75b12"/>
+<text x="156" y="206.9" class="label" text-anchor="end">pyRing: epsilon_1^+</text>
+<line x1="516.4" y1="203.9" x2="546.4" y2="203.9" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="516.4" y1="199.9" x2="516.4" y2="207.9" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="546.4" y1="199.9" x2="546.4" y2="207.9" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="531.4" cy="203.9" r="3.4" fill="#c75b12"/>
+<text x="156" y="177.3" class="label" text-anchor="end">pyRing: epsilon_1^-</text>
+<line x1="536.3" y1="174.3" x2="543.6" y2="174.3" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="536.3" y1="170.3" x2="536.3" y2="178.3" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="543.6" y1="170.3" x2="543.6" y2="178.3" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="540.0" cy="174.3" r="3.4" fill="#c75b12"/>
+<text x="156" y="147.7" class="label" text-anchor="end">pyRing: epsilon_2^+</text>
+<line x1="525.6" y1="144.7" x2="545.2" y2="144.7" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="525.6" y1="140.7" x2="525.6" y2="148.7" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="545.2" y1="140.7" x2="545.2" y2="148.7" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="535.4" cy="144.7" r="3.4" fill="#c75b12"/>
+<text x="156" y="118.2" class="label" text-anchor="end">pyRing: epsilon_2^-</text>
+<line x1="536.2" y1="115.2" x2="543.5" y2="115.2" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="536.2" y1="111.2" x2="536.2" y2="119.2" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="543.5" y1="111.2" x2="543.5" y2="119.2" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="539.8" cy="115.2" r="3.4" fill="#c75b12"/>
+<text x="156" y="88.6" class="label" text-anchor="end">pyRing: epsilon_3^+</text>
+<line x1="484.3" y1="85.6" x2="580.0" y2="85.6" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="484.3" y1="81.6" x2="484.3" y2="89.6" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="580.0" y1="81.6" x2="580.0" y2="89.6" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="532.2" cy="85.6" r="3.4" fill="#c75b12"/>
+<text x="156" y="59.0" class="label" text-anchor="end">pyRing: epsilon_3^-</text>
+<line x1="505.0" y1="56.0" x2="600.7" y2="56.0" stroke="#c75b12" stroke-width="2.1"/>
+<line x1="505.0" y1="52.0" x2="505.0" y2="60.0" stroke="#c75b12" stroke-width="1.2"/>
+<line x1="600.7" y1="52.0" x2="600.7" y2="60.0" stroke="#c75b12" stroke-width="1.2"/>
+<circle cx="552.8" cy="56.0" r="3.4" fill="#c75b12"/>
+<circle cx="790" cy="34" r="4" fill="#2f80ed"/>
+<text x="800" y="38" class="small">RINGDOWN</text>
+<circle cx="874" cy="34" r="4" fill="#c75b12"/>
+<text x="884" y="38" class="small">pyRing</text>
+</svg>
