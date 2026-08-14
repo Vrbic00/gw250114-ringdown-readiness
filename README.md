@@ -1,73 +1,115 @@
-# GW250114 ringdown-readiness framework
+# GW250114 rotating-hairy QNM analysis code
 
-This repository contains the reproducible code and compact result products for
-a draft paper on public GW250114 ringdown projections and static QNM-readiness
-benchmarks for phenomenological metrics.
+This repository contains the public analysis code accompanying the article
+"Testing black-hole quasinormal-mode grids with GW250114: a rotating-hairy
+case study".
 
-The central claim is deliberately conservative:
+The repository is intentionally **code only**. It does not duplicate the
+manuscript, bibliography, submission files, or publication figures maintained
+separately in Overleaf.
 
-> Public GW250114 ringdown/spectroscopy products, projected onto published
-> higher-derivative Kerr QNM fingerprints in a one-at-a-time linearized
-> Gaussian approximation, show no robust beyond-Kerr deviation. Static
-> supplied-potential examples are used as QNM-readiness benchmarks, not as
-> observational constraints on the rotating GW250114 remnant.
+## Publication snapshot policy
 
-## What is included
+This repository is intended as the frozen code snapshot for one article. After
+publication, scientific extensions should be released in a new repository
+linked to the new article. The history of this repository should remain
+available so readers can recover the code that accompanied the published work.
 
-- `scripts/`: Wolfram Language and Python scripts used for the projection,
-  validation, audit, and manuscript-table layers.
-- `config/`: run configurations and small registries.
-- `data/`: small machine-readable theory and candidate-metric registries.
-- `results/`: compact CSV/Markdown/figure outputs used in the draft.
-- `paper/`: current LaTeX manuscript source, bibliography, figures, and tables.
-- `notes/`: selected project notes documenting the main scientific decisions.
-- `DATA_SOURCES.md` and `REPRODUCIBILITY.md`: data provenance and run order.
+## Scientific scope
 
-## What is not included
+The code implements:
 
-Large public data products are intentionally not committed:
+- a Dudley--Finley continued-fraction calculation for the rotating hairy
+  black-hole spectrum studied by Zhen Li;
+- construction and interpolation validation of the production QNM grid;
+- projection of the grid onto public pyRing and RINGDOWN posterior products
+  for GW250114;
+- static supplied-potential validation examples;
+- a numerical-relativity-calibrated evolving-Kerr false-hair control;
+- positive-injection and robustness calculations.
 
-- GW250114 Zenodo/GWOSC tarballs and posterior samples,
-- extracted raw HDF5/DAT products,
-- local Python environments and package caches,
-- private reference PDFs used only to tune author style,
-- Overleaf ZIP exports and other transient build files.
+The event-level calculation uses public marginalized posterior products. It is
+not a new detector-strain likelihood. The Dudley--Finley equation is an
+approximate spectral prescription and does not supply the full coupled
+perturbation sector of every theory sharing the background metric.
 
-See `DATA_SOURCES.md` for the data provenance and download policy.
+## Repository contents
 
-## Minimal reproduction path
+- `scripts/python/`: numerical solvers, inference, controls, and audits.
+- `scripts/wolfram/`: public full-IMR posterior calibration.
+- `config/`: fixed analysis settings used for the article.
+- `data/`: two compact numerical input tables needed by the scripts; no large
+  detector or numerical-relativity data are redistributed.
+- `DATA_SOURCES.md`: where to obtain the external public data.
+- `REPRODUCIBILITY.md`: run order and expected outputs.
+- `MANIFEST.csv`: SHA-256 inventory of the public snapshot.
 
-The public-data projection layer requires Wolfram Language and the public
-GW250114 data products described in `DATA_SOURCES.md`.
+## Installation
 
-```powershell
-wolframscript -file scripts/wolfram/gw250114_posterior_calibration.wl
-wolframscript -file scripts/wolfram/gw250114_public_ringdown_products.wl
-wolframscript -file scripts/wolfram/gw250114_ringdown_eft_projection.wl
-wolframscript -file scripts/wolfram/gw250114_pyring_delta_eft_projection.wl
-wolframscript -file scripts/wolfram/gw250114_constraints_comparison.wl
-wolframscript -file scripts/wolfram/gw250114_pyring_filter_robustness.wl
-wolframscript -file scripts/wolfram/gw250114_linearized_posterior_projection.wl
-wolframscript -file scripts/wolfram/gw250114_paper_tables.wl
-```
-
-The static supplied-potential validation and readiness layer is Python based:
+The frozen environment was tested with Python 3.12. Install the core packages:
 
 ```powershell
-python scripts/python/static_master_potential_time_domain.py
-python scripts/python/tidal_charge_time_domain_benchmark.py
-python scripts/python/bardeen_time_domain_benchmark.py
-python scripts/python/hayward_time_domain_benchmark.py
-python scripts/python/hayward_overtone_matrix_pencil.py
-python scripts/python/static_qnm_scorecard.py
-python scripts/python/static_qnm_readiness_audit.py
-python scripts/python/static_qnm_physical_deviation_report.py
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-## Repository status
+The optional reconstruction of the pre-peak remnant prior and the SXS
+calibration requires additional packages:
 
-This is a pre-submission research repository. The code and result tables are
-kept public-facing, but the manuscript interpretation should still follow the
-guardrails in `results/manuscript_package/claim_guardrails.md`.
+```powershell
+python -m pip install -r requirements-optional.txt
+```
 
-Remote repository: https://github.com/Vrbic00/gw250114-ringdown-readiness
+On Linux or macOS, activate the environment with `source .venv/bin/activate`.
+
+## Quick validation
+
+Check the public folder structure and Python syntax without installing the
+scientific dependencies:
+
+```powershell
+python scripts/validate_repository.py
+```
+
+The shortest independent check reproduces the published QNM table and Kerr
+limit:
+
+```powershell
+python scripts/python/hairy_continued_fraction.py
+```
+
+A smaller development grid can be generated with:
+
+```powershell
+python scripts/python/build_hairy_qnm_grid.py
+```
+
+The full production grid contains 35,343 direct complex roots and is
+computationally more expensive:
+
+```powershell
+python scripts/python/build_hairy_qnm_production_grid.py
+```
+
+See `REPRODUCIBILITY.md` for the full sequence and for the copy commands that
+place the supplied compact derived inputs in their expected runtime paths.
+
+## External data
+
+Large public GW250114 and SXS files are deliberately excluded. Download
+instructions, expected paths, and source identifiers are in `DATA_SOURCES.md`.
+The repository's `.gitignore` prevents those files from being committed by
+accident.
+
+## Citation
+
+If you use this code, please cite the associated article. Bibliographic details
+can be added to `CITATION.cff` after the article receives its final DOI.
+
+## License
+
+The original code in this repository is released under the MIT License. Public
+data, third-party software, and published reference values remain subject to
+their own licenses and citation requirements.

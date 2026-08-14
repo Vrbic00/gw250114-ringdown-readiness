@@ -1,6 +1,0 @@
-family,readiness_status,validated_modes,validation_rows,max_validation_delta_pct,max_sampled_physical_delta_pct,largest_sampled_parameter,interpretation_boundary
-Bardeen_NED,validated_static_gravitational_qnm,"l=2,n=0",3,0.873,109.8,alpha=0.7698,Static supplied-potential benchmark; not a GW250114 rotating-remnant exclusion.
-Braneworld_tidal_charge,validated_static_gravitational_qnm,"l=2,n=0",5,0.454,21.214,q_tidal=2,Static supplied-potential benchmark; not a GW250114 rotating-remnant exclusion.
-Hayward,validated_static_gravitational_qnm,"l=2,n=0",6,0.718,16.596,gamma=1.18,Static supplied-potential benchmark; not a GW250114 rotating-remnant exclusion.
-Hayward_overtone,validated_static_gravitational_qnm,"l=2,n=1",7,0.925,17.407,gamma=1.18,Static supplied-potential benchmark; not a GW250114 rotating-remnant exclusion.
-Schwarzschild,validated_static_gravitational_qnm,"l=2,n=0",4,0.432,,not_applicable,Static supplied-potential benchmark; not a GW250114 rotating-remnant exclusion.

@@ -1,22 +1,49 @@
+# Python and local environments
 __pycache__/
 *.py[cod]
 .venv/
 venv/
 .deps/
 .deps_local/
+.pytest_cache/
+.mypy_cache/
+
+# Large or reconstructed data
 data/raw/
 data/cache/
 *.h5
 *.hdf5
+*.tar
 *.tar.gz
 *.zip
-*.mx
-*.wl~
-*.nb~
-*.log
+
+# Generated numerical outputs and figures
+results/
+figures/
+*.png
+*.jpg
+*.jpeg
+*.pdf
+*.svg
+*.npz
+*.joblib
+
+# Manuscript and submission material
+paper/
+submission/
+manuscript*
+references.bib
+*.tex
+*.bib
 *.aux
 *.bbl
 *.blg
 *.out
 *.toc
+*.log
+
+# Wolfram and transient files
+*.mx
+*.wl~
+*.nb~
 *.tmp

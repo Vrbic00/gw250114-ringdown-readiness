@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2026 J. Vrba
+Copyright (c) 2026 Jaroslav Vrba
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
@@ -20,5 +20,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 
-Third-party data products, reference tables, and cited papers remain governed
-by their original licenses and terms of use.
+External data products, third-party software, published reference values, and
+the associated article are not relicensed by this file.

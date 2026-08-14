@@ -1,0 +1,50 @@
+{
+  "event": {
+    "name": "GW250114_082203",
+    "mass_detector_msun": 68.1,
+    "spin": 0.68
+  },
+  "sxs": {
+    "simulation": "SXS:BBH:3617",
+    "level": 3,
+    "metadata": "data/raw/SXS_BBH_3617/Lev3_metadata.json",
+    "horizons": "data/raw/SXS_BBH_3617/Lev3_Horizons.h5",
+    "strain": "data/raw/SXS_BBH_3617/Lev3_Strain_N2.h5",
+    "strain_metadata": "data/raw/SXS_BBH_3617/Lev3_Strain_N2.json",
+    "fit_window_Mf": [0.0, 30.0],
+    "fit_start_checks_Mf": [0.0, 2.0, 4.0, 6.0, 8.0, 10.0],
+    "track_end_Mf": 60.0
+  },
+  "independent_prior": {
+    "samples": "data/raw/GW250114_data_release/data/pre_-40M_with_lnL_cut.dat",
+    "cut_time_M": -40.0,
+    "primary_model": "equal_weight_BMR2012_HBR2016_and_NRSur3dq8_projected_mixture",
+    "covariance_output": "results/article1_independent_prior/pre_minus40M_remnant_prior_covariance.csv",
+    "mean_output": "results/article1_independent_prior/pre_minus40M_remnant_prior_mean.csv"
+  },
+  "analysis": {
+    "sample_rate_hz": 8192.0,
+    "duration_s": 0.03,
+    "peak_snr_values": [25.0, 100.0],
+    "primary_peak_snr": 25.0,
+    "start_times_Mf": [0.0, 2.0, 4.0, 6.0, 8.0, 10.0, 12.0, 16.0, 20.0],
+    "nonlinear_start_times_Mf": [0.0, 6.0, 12.0, 20.0],
+    "mode_sets": {
+      "220_only": ["220"],
+      "220_221": ["220", "221"]
+    },
+    "all_operators": ["lambda_ev", "lambda_odd", "epsilon1", "epsilon2", "epsilon3"],
+    "all_branches": ["plus", "minus"],
+    "derivative_steps": {
+      "ln_mass": 0.0001,
+      "spin": 0.0001,
+      "alpha": 0.000001
+    },
+    "identifiability_relative_tolerance": 1e-10,
+    "bounds": {
+      "ln_mass": [-0.25, 0.25],
+      "spin_offset": [-0.25, 0.25],
+      "alpha": [-0.5, 0.5]
+    }
+  }
+}

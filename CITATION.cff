@@ -1,9 +1,10 @@
 cff-version: 1.2.0
-message: "If you use this repository, please cite the associated paper or this software record."
-title: "GW250114 ringdown-readiness framework"
-version: "0.1.0"
-date-released: "2026-06-28"
-repository-code: "https://github.com/Vrbic00/gw250114-ringdown-readiness"
+message: "If you use this software, please cite the associated article."
+title: "Code for Testing black-hole quasinormal-mode grids with GW250114: a rotating-hairy case study"
+type: software
+version: "1.0.0"
 authors:
   - family-names: "Vrba"
-    given-names: "J."
+    given-names: "Jaroslav"
+repository-code: "https://github.com/Vrbic00/gw250114-hairy-qnm-code"
+license: MIT

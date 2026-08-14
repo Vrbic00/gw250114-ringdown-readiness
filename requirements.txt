@@ -1,4 +1,9 @@
-numpy>=1.26
-scipy>=1.11
-qnm>=0.4.4
-reportlab>=4.0
+numpy==2.4.6
+scipy==1.17.1
+qnm==0.4.4
+h5py==3.14.0
+joblib==1.5.2
+matplotlib==3.11.1
+Pillow==12.3.0
+scikit-learn==1.7.2
+six==1.17.0

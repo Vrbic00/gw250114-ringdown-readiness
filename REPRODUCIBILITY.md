@@ -1,49 +1,89 @@
-# Reproducibility notes
+# Reproducibility guide
 
-The workflow has two independent layers.
+Run all commands from the repository root. Generated outputs are written under
+`results/`, which is intentionally ignored by Git.
 
-## 1. Public GW250114 projection
+## 1. Prepare derived inputs
 
-This layer projects public RINGDOWN/pyRing posterior products onto published
-higher-derivative Kerr QNM fingerprints. It is a linearized public-data
-projection, not a full strain-level EFT likelihood.
+Download the public inputs described in `DATA_SOURCES.md`, then create the
+compact intermediate files:
 
-Main outputs:
-
-```text
-results/gw250114_constraints_comparison/projection_constraints_long.csv
-results/gw250114_constraints_comparison/projection_consistency_by_operator.csv
-results/gw250114_paper_tables/table1_main_projected_constraints.csv
+```powershell
+python scripts/python/article1_independent_prior.py
+wolframscript -file scripts/wolfram/gw250114_posterior_calibration.wl
+python scripts/python/article1_nr_calibration.py
 ```
 
-Main interpretation:
+The reconstruction path needs `requirements-optional.txt`, Wolfram Language,
+and the external raw files.
 
-- `alpha = 0` remains inside every one-at-a-time 90 percent projected interval.
-- RINGDOWN and pyRing branches are used as consistency checks and are not
-  statistically combined as independent likelihoods.
-- Gaussian intervals may be narrower than a full strain-level Bayesian
-  analysis because nonlinear mass-spin-coupling correlations and prior-volume
-  effects are not modeled.
+## 2. Static supplied-potential validation
 
-## 2. Static QNM-readiness benchmarks
-
-This layer tests whether supplied master-potential examples can reproduce
-published QNM frequencies. It is not an observational constraint on GW250114.
-
-Main outputs:
-
-```text
-results/static_qnm_scorecard/static_qnm_validation_summary.csv
-results/static_qnm_readiness_audit/static_metric_readiness_audit.csv
-results/static_qnm_physical_deviations/static_qnm_physical_deviations.csv
+```powershell
+python scripts/python/static_master_potential_time_domain.py
+python scripts/python/tidal_charge_time_domain_benchmark.py
+python scripts/python/bardeen_time_domain_benchmark.py
+python scripts/python/hayward_time_domain_benchmark.py
+python scripts/python/hayward_overtone_matrix_pencil.py
 ```
 
-Main interpretation:
+These are numerical-intake benchmarks, not physical models of the rotating
+GW250114 remnant.
 
-- The current supplied-potential validations are sub-percent checks against
-  published references.
-- Physical deviations from Schwarzschild or zero-parameter baselines are model
-  comparisons, not detector residuals or exclusion statistics.
-- Metric-only, QPO-only, or shadow-only models are not gravitational-ringdown
-  ready unless they also provide perturbation equations, boundary conditions,
-  and reproducible QNM spectra.
+## 3. Rotating-hairy QNM validation and grid
+
+```powershell
+python scripts/python/hairy_continued_fraction.py
+python scripts/python/build_hairy_qnm_production_grid.py
+python scripts/python/hairy_qnm_internal_systematics.py --grid results/hairy_qnm_production_grid/hairy_qnm_production_grid.npz
+```
+
+The production grid uses the settings in
+`config/hairy_gw250114_publication.json` and contains 35,343 direct roots.
+
+## 4. Public-posterior likelihood model
+
+This stage requires the pyRing posterior from `DATA_SOURCES.md`:
+
+```powershell
+python scripts/python/gw250114_bayesian_spectral_eft.py
+```
+
+It creates the compact GMM bundle used by the rotating-hairy event analysis.
+
+## 5. Event-level rotating-hairy calculation
+
+```powershell
+python scripts/python/gw250114_hairy_constraints.py
+```
+
+This stage also uses the public RINGDOWN deviation and time-scan files listed
+in `DATA_SOURCES.md`. pyRing and RINGDOWN are separate analyses of the same
+event and are not multiplied as independent likelihoods.
+
+## 6. Controls and robustness
+
+```powershell
+python scripts/python/hairy_evolving_kerr_control.py
+python scripts/python/hairy_positive_injection_recovery.py
+python scripts/python/hairy_referee_robustness.py
+python scripts/python/hairy_publication_computation_audit.py
+```
+
+## Expected numerical checkpoints
+
+Principal checkpoints reported for the publication snapshot include:
+
+- 81 published table cases reproduced;
+- 35,343 direct production-grid modes;
+- maximum depth change below `1e-8`;
+- maximum interpolation relative error below `5e-4`;
+- successful stationary-Kerr and evolving-Kerr controls.
+
+The exact public file inventory is recorded in `MANIFEST.csv`.
+
+## What is deliberately absent
+
+This repository does not contain the article source, bibliography, Overleaf
+project, submission package, publication figures, large raw data, virtual
+environments, caches, or the full generated-result tree.

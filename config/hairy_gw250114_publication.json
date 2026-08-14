@@ -1,0 +1,107 @@
+{
+  "model": "Zhen_Li_rotating_hairy_black_hole",
+  "event": "GW250114_082203",
+  "qnm_grid": {
+    "spin_min": 0.1,
+    "spin_max": 0.9,
+    "spin_step": 0.025,
+    "alpha_min": 0.0,
+    "alpha_max": 0.5,
+    "alpha_step": 0.025,
+    "h0_values": [
+      0.5,
+      0.625,
+      0.75,
+      0.875,
+      1.0,
+      1.125,
+      1.25,
+      1.375,
+      1.5,
+      1.625,
+      1.75,
+      1.8,
+      1.85,
+      1.9,
+      1.95,
+      1.975,
+      1.99
+    ],
+    "overtones": [0, 1, 2],
+    "low_depth": 160,
+    "high_depth": 320,
+    "interpolation_validation_samples": 256
+  },
+  "inference": {
+    "primary_qnm_variant": "table_calibrated_approximate_horizons",
+    "alpha_prior": [0.0, 0.5],
+    "h0_prior": [0.5, 1.99],
+    "prior_samples": 4096,
+    "pyRing_gmm_components": [8, 16, 32, 64],
+    "ringdown_deviation_gmm_components": [4, 8, 16, 32],
+    "ringdown_deviation_fit_samples": 40000,
+    "ringdown_gmm_components": [4, 8, 16, 32],
+    "ringdown_start_times_M": [4.0, 5.0, 6.0, 8.0, 10.0, 10.5, 12.0],
+    "primary_start_time_M": 6.0,
+    "seed": 2501142212
+  },
+  "prior_scenarios": [
+    "pre_minus40M_BMR_HBR",
+    "pre_minus40M_NRSur3dq8",
+    "full_IMR_NRSur7dq4"
+  ],
+  "hair_prior_robustness": {
+    "alpha_max_values": [0.3, 0.5],
+    "h0_max_values": [1.75, 1.9, 1.99]
+  },
+  "evolving_kerr_control": {
+    "mass_detector_msun": 68.1,
+    "spin": 0.68,
+    "sample_rate_hz": 8192.0,
+    "duration_s": 0.03,
+    "network_snr": 25.0,
+    "modes": ["220", "221"],
+    "amplitudes": {
+      "220": [1.0, 0.0],
+      "221": [0.159, -0.313]
+    },
+    "epsilon_mass": -0.005603,
+    "epsilon_spin": -0.015798,
+    "tau_mass_M": 5.124,
+    "tau_spin_M": 5.375,
+    "start_times_M": [0.0, 4.0, 6.0, 8.0, 10.0, 12.0],
+    "recovery_alpha_values": [0.0, 0.025, 0.05, 0.1, 0.2, 0.3, 0.4, 0.5],
+    "recovery_h0_values": [0.5, 0.75, 1.0, 1.25, 1.5, 1.75, 1.9, 1.99]
+  },
+  "referee_robustness": {
+    "remnant_subsample_repeats": 256,
+    "gmm_refit_repeats": 6,
+    "gmm_fit_samples": 30000,
+    "tail_probability": 0.05
+  },
+  "positive_hair_control": {
+    "mass_detector_msun": 68.1,
+    "spin": 0.68,
+    "sample_rate_hz": 8192.0,
+    "duration_s": 0.03,
+    "segment_snr": 14.82,
+    "modes": ["220", "221"],
+    "amplitudes": {
+      "220": [1.0, 0.0],
+      "221": [0.159, -0.313]
+    },
+    "injections": [
+      {"h0": 0.5, "alpha": 0.05},
+      {"h0": 0.5, "alpha": 0.1},
+      {"h0": 0.5, "alpha": 0.2},
+      {"h0": 0.5, "alpha": 0.3},
+      {"h0": 0.5, "alpha": 0.5},
+      {"h0": 1.0, "alpha": 0.5}
+    ],
+    "snr_ladder": {
+      "h0": 0.5,
+      "alpha": 0.5,
+      "values": [25.0, 40.0, 60.0]
+    }
+  }
+}

@@ -1,0 +1,4 @@
+-r requirements.txt
+sxs==2026.0.2
+surfinBH==1.2.7
+precession==2.1.1
