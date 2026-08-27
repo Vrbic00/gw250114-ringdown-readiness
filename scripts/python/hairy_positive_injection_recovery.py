@@ -96,7 +96,7 @@ def save_figure(path_base: Path, rows: list[dict[str, object]]) -> None:
         axes[1].plot(x, log_bayes, marker=marker, linestyle=linestyle, color=color, label=label)
     axes[0].set_ylabel(r"expected max. $\Delta\ln\mathcal{L}$ vs. Kerr")
     axes[1].axhline(0.0, color="black", lw=1.0)
-    axes[1].set_ylabel(r"Asimov $\ln B_{\rm hair/GR}$")
+    axes[1].set_ylabel(r"Asimov $\ln B_{\rm Li}^{\rm K}$")
     event_log_bayes = np.asarray(
         [float(row["log_bayes_factor_hairy_vs_gr"]) for row in selected], dtype=float
     )

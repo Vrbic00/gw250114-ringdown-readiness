@@ -260,7 +260,7 @@ def save_control_figure(path_base: Path, summaries: list[dict[str, object]]) -> 
         }[injection]
         axes[0].plot(times, [float(row["maximum_log_likelihood_ratio_vs_gr"]) for row in rows], marker="o", color=color, label=label)
         axes[1].plot(times, [float(row["alpha_q90"]) for row in rows], marker="o", color=color, label=label)
-    axes[0].set_ylabel(r"maximum $\Delta\ln L$ relative to GR")
+    axes[0].set_ylabel(r"maximum $\Delta\ln L$ relative to Kerr")
     axes[1].set_ylabel(r"90% upper quantile of $\alpha$")
     axes[1].axhline(0.45, color="grey", ls=":", label="uniform-prior value")
     for ax in axes:

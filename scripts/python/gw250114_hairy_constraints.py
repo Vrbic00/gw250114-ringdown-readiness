@@ -494,8 +494,8 @@ def save_qnm_shift_figure(
         fig.colorbar(mesh, ax=ax, label="percent")
         ax.set_title(title)
         ax.set_xlabel(r"$\alpha$")
-        ax.set_ylabel(r"$h_0$")
-    fig.suptitle(f"Direct QNM atlas at a={reference_spin:.2f}")
+        ax.set_ylabel(r"$h_0/M$")
+    fig.suptitle(rf"Direct QNM atlas at $\chi={reference_spin:.2f}$")
     fig.savefig(path_base.with_suffix(".png"), dpi=220)
     fig.savefig(path_base.with_suffix(".pdf"))
     plt.close(fig)
@@ -524,8 +524,8 @@ def save_primary_posterior_figure(
             linewidths=1.5,
         )
         ax.clabel(contour, fmt={1.0: "posterior = prior"}, fontsize=8)
-    ax.set_xlabel(r"hair parameter $\alpha$")
-    ax.set_ylabel(r"hair parameter $h_0$")
+    ax.set_xlabel(r"deformation parameter $\alpha$")
+    ax.set_ylabel(r"deformation coordinate $h_0/M$")
     ax.set_title(title)
     fig.savefig(path_base.with_suffix(".png"), dpi=240)
     fig.savefig(path_base.with_suffix(".pdf"))
@@ -575,7 +575,7 @@ def save_start_time_figure(path_base: Path, rows: list[dict[str, object]]) -> No
     fig, axes = plt.subplots(1, 2, figsize=(9.0, 4.0), constrained_layout=True)
     axes[0].plot(times, [float(row["log_bayes_factor_hairy_vs_gr"]) for row in rows], marker="o")
     axes[0].axhline(0.0, color="black", lw=1.0)
-    axes[0].set_ylabel(r"$\ln B_{\rm hair/GR}$")
+    axes[0].set_ylabel(r"$\ln B_{\rm Li}^{\rm K}$")
     axes[1].plot(times, [float(row["kl_divergence_bits"]) for row in rows], marker="o", color="tab:orange")
     axes[1].set_ylabel("information gain [bits]")
     for ax in axes:
@@ -925,7 +925,7 @@ def main() -> None:
         alphas,
         primary_products[0],
         primary_products[1],
-        "GW250114: pyRing hairy-BH projection",
+        "GW250114: pyRing Li-prescription projection",
     )
     if direct_products is None:
         raise RuntimeError("direct RINGDOWN posterior products were not produced")
@@ -935,7 +935,7 @@ def main() -> None:
         alphas,
         direct_products[0],
         direct_products[1],
-        "GW250114: RINGDOWN hairy-BH projection",
+        "GW250114: RINGDOWN Li-prescription projection",
     )
     figure_limits = [
         row

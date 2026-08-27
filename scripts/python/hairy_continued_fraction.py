@@ -4,9 +4,11 @@ This implements the approximate Dudley--Finley radial problem in
 arXiv:2212.08112.  It is deliberately kept separate from the observational
 pipeline until the published tables and the Kerr limit are reproduced.
 
-The horizon indices are obtained directly from the indicial equation of the
-published radial ODE.  This resolves a terse expression in the article source
-and gives the standard Teukolsky/Kerr indices when ``alpha_hair = 0``.
+The source leaves the deformed horizon indices ambiguous.  The default
+``table_calibrated`` branch retains the Kerr horizon identity and reproduces
+the published tables; ``ode_consistent`` evaluates the index from the stated
+radial ODE.  Both give the standard Teukolsky/Kerr indices when
+``alpha_hair = 0``.
 """
 
 from __future__ import annotations
