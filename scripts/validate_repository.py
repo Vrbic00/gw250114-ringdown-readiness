@@ -1,6 +1,8 @@
 from __future__ import annotations
 
 import ast
+import csv
+import hashlib
 import re
 from pathlib import Path
 
@@ -12,13 +14,16 @@ REQUIRED = {
     "REPRODUCIBILITY.md",
     "LICENSE",
     "CITATION.cff",
+    "MANIFEST.csv",
     "requirements.txt",
     "config/hairy_gw250114_publication.json",
     "data/ovalle_rotating_hairy_qnm_zhen_li_2022.csv",
     "scripts/python/hairy_continued_fraction.py",
     "scripts/python/build_hairy_qnm_production_grid.py",
+    "scripts/python/effective_kerr_newman_control.py",
     "scripts/python/gw250114_hairy_constraints.py",
 }
+SKIP_PARTS = {".git", "__pycache__", ".pytest_cache"}
 FORBIDDEN_EXTENSIONS = {".tex", ".bib", ".png", ".jpg", ".jpeg", ".pdf", ".svg"}
 SENSITIVE_PATTERNS = {
     "absolute Windows user path": re.compile(r"[A-Za-z]:\\Users\\", re.IGNORECASE),
@@ -32,7 +37,11 @@ SENSITIVE_PATTERNS = {
 
 def main() -> int:
     failures: list[str] = []
-    files = [path for path in ROOT.rglob("*") if path.is_file()]
+    files = [
+        path
+        for path in ROOT.rglob("*")
+        if path.is_file() and not SKIP_PARTS.intersection(path.relative_to(ROOT).parts)
+    ]
     relative = {path.relative_to(ROOT).as_posix() for path in files}
 
     for required in sorted(REQUIRED - relative):
@@ -52,6 +61,27 @@ def main() -> int:
                 ast.parse(path.read_text(encoding="utf-8"), filename=rel)
             except SyntaxError as error:
                 failures.append(f"Python syntax error in {rel}: {error}")
+
+    manifest_path = ROOT / "MANIFEST.csv"
+    if manifest_path.exists():
+        with manifest_path.open(newline="", encoding="utf-8") as handle:
+            manifest = {row["path"]: row for row in csv.DictReader(handle)}
+        inventory = {
+            path.relative_to(ROOT).as_posix(): path
+            for path in files
+            if path != manifest_path
+        }
+        for rel in sorted(inventory.keys() - manifest.keys()):
+            failures.append(f"manifest entry missing: {rel}")
+        for rel in sorted(manifest.keys() - inventory.keys()):
+            failures.append(f"stale manifest entry: {rel}")
+        for rel in sorted(inventory.keys() & manifest.keys()):
+            path = inventory[rel]
+            digest = hashlib.sha256(path.read_bytes()).hexdigest()
+            if manifest[rel].get("bytes") != str(path.stat().st_size):
+                failures.append(f"manifest byte count mismatch: {rel}")
+            if manifest[rel].get("sha256") != digest:
+                failures.append(f"manifest SHA-256 mismatch: {rel}")
 
     if failures:
         for failure in failures:
