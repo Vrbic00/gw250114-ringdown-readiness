@@ -1,10 +1,10 @@
 cff-version: 1.2.0
 message: "If you use this software, please cite the associated article."
-title: "Code for Testing black-hole quasinormal-mode grids with GW250114: a rotating-hairy case study"
+title: "Code for When accurate quasinormal-mode grids are not enough: numerical readiness and structural uncertainty in GW250114 spectroscopy"
 type: software
 version: "1.0.0"
 authors:
   - family-names: "Vrba"
     given-names: "Jaroslav"
-repository-code: "https://github.com/Vrbic00/gw250114-hairy-qnm-code"
+repository-code: "https://github.com/Vrbic00/gw250114-ringdown-readiness"
 license: MIT

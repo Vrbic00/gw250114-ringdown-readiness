@@ -1,8 +1,8 @@
-# GW250114 rotating-hairy QNM analysis code
+# GW250114 QNM-readiness and structural-systematics code
 
 This repository contains the public analysis code accompanying the article
-"Testing black-hole quasinormal-mode grids with GW250114: a rotating-hairy
-case study".
+"When accurate quasinormal-mode grids are not enough: numerical readiness and
+structural uncertainty in GW250114 spectroscopy".
 
 The repository is intentionally **code only**. It does not duplicate the
 manuscript, bibliography, submission files, or publication figures maintained
@@ -19,19 +19,22 @@ available so readers can recover the code that accompanied the published work.
 
 The code implements:
 
-- a Dudley--Finley continued-fraction calculation for the rotating hairy
-  black-hole spectrum studied by Zhen Li;
+- a Dudley--Finley continued-fraction calculation for the factorised spectrum
+  studied by Zhen Li;
 - construction and interpolation validation of the production QNM grid;
+- an explicit effective Kerr--Newman-form control showing what information
+  remains after the exponential horizon function is factorised;
 - projection of the grid onto public pyRing and RINGDOWN posterior products
   for GW250114;
 - static supplied-potential validation examples;
-- a numerical-relativity-calibrated evolving-Kerr false-hair control;
+- a numerical-relativity-calibrated evolving-Kerr false-deformation control;
 - positive-injection and robustness calculations.
 
 The event-level calculation uses public marginalized posterior products. It is
-not a new detector-strain likelihood. The Dudley--Finley equation is an
-approximate spectral prescription and does not supply the full coupled
-perturbation sector of every theory sharing the background metric.
+not a new detector-strain likelihood. After horizon factorisation, the radial
+problem is exactly an effective Kerr--Newman-form Dudley--Finley equation. The
+original geometry enters only through its parameter map, and the equation does
+not supply the full coupled perturbation sector.
 
 ## Repository contents
 
@@ -91,6 +94,13 @@ computationally more expensive:
 
 ```powershell
 python scripts/python/build_hairy_qnm_production_grid.py
+```
+
+After generating the coarse internal-systematics table, run the explicit
+structural control with:
+
+```powershell
+python scripts/python/effective_kerr_newman_control.py
 ```
 
 See `REPRODUCIBILITY.md` for the full sequence and for the copy commands that
